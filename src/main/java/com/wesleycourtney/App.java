@@ -16,19 +16,25 @@ public class App {
 		Spark.port(80);
 
 		Gson gson = new Gson();
-		User rhonda = new UserFactory()
-				.setFirstName("Rhonda")
-				.setLastName("Holloway")
-				.setPhoneNumber("(526) 141-3395")
-				.setEmail("elit.erat.vitae@vitaenibhDonec.net")
-				.setBirthdate("01-24-10")
-				.setStreetAddress("Ap #509-9596 Auctor, Rd.")
-				.setCity("Chepstow")
-				.setZip("6152")
-				.setCountry("Malta")
-				.build();
+		
 
-		get("/hello", (req, res) -> gson.toJson(rhonda));
+		get("/hello", (req, res) -> {
+			
+			User rhonda = new UserFactory()
+					.setFirstName("Rhonda")
+					.setLastName("Holloway")
+					.setPhoneNumber("(526) 141-3395")
+					.setEmail("elit.erat.vitae@vitaenibhDonec.net")
+					.setBirthdate("01-24-10")
+					.setStreetAddress("Ap #509-9596 Auctor, Rd.")
+					.setCity("Chepstow")
+					.setZip("6152")
+					.setCountry("Malta")
+					.build();
+			
+			return gson.toJson(rhonda);
+			
+		});
 	}
 
 }

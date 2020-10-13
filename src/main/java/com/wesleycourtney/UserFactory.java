@@ -78,10 +78,10 @@ public class UserFactory {
 		private String phoneNumber;
 		private String email;
 		private String birthdate;
-		String streetAddress;
-		String city;
-		String zip;
-		String country;
+		private String streetAddress;
+		private String city;
+		private String zip;
+		private String country;
 
 		public void setFirstName(String firstName) {
 			this.firstName = firstName;
